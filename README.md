@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+git mv README.md index.html
+git commit -m "Rename README.md to index.html"
+git push
 <head>
   <meta charset="UTF-8">
   <title>終極文字轉換器</title>
