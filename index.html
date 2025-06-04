@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>內射白虎女大生</title>
+  <title>神秘影片</title>
   <style>
     body {
       margin: 0;
@@ -14,16 +14,39 @@
     }
     video {
       max-width: 100%;
-      max-height: 100vh;
+      max-height: 100%;
+    }
+    #notice {
+      position: absolute;
+      color: white;
+      top: 20px;
+      font-size: 1.2rem;
+      font-family: sans-serif;
+      text-align: center;
+      width: 100%;
     }
   </style>
 </head>
 <body>
 
-  <video autoplay muted controls>
+  <div id="notice">👆 點一下畫面開啟聲音</div>
+
+  <video id="myVideo" autoplay muted>
     <source src="Download.mp4" type="video/mp4">
-    您的瀏覽器不支援影片播放。
+    抱歉，您的瀏覽器不支援影片播放。
   </video>
+
+  <script>
+    const video = document.getElementById('myVideo');
+    const notice = document.getElementById('notice');
+
+    // 使用者第一次點擊畫面時解除靜音
+    document.body.addEventListener('click', () => {
+      video.muted = false;
+      video.play();
+      notice.style.display = 'none';
+    }, { once: true });
+  </script>
 
 </body>
 </html>
